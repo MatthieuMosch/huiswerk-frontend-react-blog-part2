@@ -3,6 +3,12 @@ main {
   flex-direction: column;
 }
 
+article {
+  border: 2px grey double;
+  margin: 1rem;
+  padding: 2rem;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
