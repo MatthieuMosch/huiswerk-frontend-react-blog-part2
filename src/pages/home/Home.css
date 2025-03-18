@@ -1,0 +1,10 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    border: 2px grey double;
+    margin: 1rem;
+    padding: 2rem;
+}
