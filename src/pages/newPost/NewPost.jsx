@@ -1,5 +1,6 @@
 import {useState} from "react";
 import axios from "axios";
+
 import "./NewPost.css";
 
 import InputField from "../../components/inputField/InputField.jsx";
@@ -107,6 +108,7 @@ function NewPost() {
         case "created":
             return (
                 <div>
+                    {isLoading && <p>loading...</p>}
                     <h2>De blogpost is succesvol toegevoegd.</h2>
                     Je kunt deze <a href={`/posts/${postData.id}`}>hier</a> bekijken.
                 </div>

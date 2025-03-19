@@ -1,5 +1,7 @@
 import {Route, Routes} from "react-router-dom";
+
 import './App.css'
+
 import Home from "./pages/home/Home.jsx";
 import Post from "./pages/post/Post.jsx";
 import NewPost from "./pages/newPost/NewPost.jsx";

@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
+
 import "./Home.css";
 
 import Tile from "../../components/tile/Tile.jsx";
