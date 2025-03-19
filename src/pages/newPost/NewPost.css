@@ -1,0 +1,26 @@
+fieldset {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.input-field {
+    align-self: flex-start;
+    width: 100%;
+}
+
+.textarea-field {
+    width: 100%;
+}
+
+.input-field>label,
+.input-field>input {
+    border-radius: 10%;
+    font-size: 1em;
+    margin: 0.2em;
+    padding: 0.2em 0.5em;
+}
+
+form>button {
+    width: 100%;
+}

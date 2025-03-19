@@ -1,0 +1,14 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px grey double;
+}
+
+.button-tile {
+    flex-basis: 20%;
+}
