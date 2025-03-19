@@ -21,6 +21,7 @@ function NewPost() {
         author: "",
     });
 
+    //this function is not used anymore, but is still here because it was part of the exercise
     async function addConstantPost(post) {
         // <button type="button" onClick={()=>addConstantPost(fakePost)}>voeg een fake post toe</button>
         // <button type="button" onClick={()=>addConstantPost(newPost)}>voeg een nieuwe post toe</button>
@@ -43,6 +44,7 @@ function NewPost() {
     }
 
     //change the subtitle of the first post
+    //this function is not used anymore, but is still here because it was part of the exercise
     async function changeFirstSubtitle(subtitle) {
         // <button type="button" onClick={()=>changeFirstSubtitle(`changed at ${new Date().toLocaleTimeString()}`)}>
         try {
@@ -83,6 +85,7 @@ function NewPost() {
             return (
                 <form onSubmit={addPost}>
                     {status && <Error>er is iets fout gegaan</Error>}
+                    {isLoading && <p>loading...</p>}
                     <fieldset>
                         <legend>Nieuwe Post</legend>
                         <InputField id="title" placeholder="Titel" value={postData.title} onChange={doChange}>
@@ -103,10 +106,10 @@ function NewPost() {
             );
         case "created":
             return (
-                <>
-                    De blogpost is succesvol toegevoegd.
+                <div>
+                    <h2>De blogpost is succesvol toegevoegd.</h2>
                     Je kunt deze <a href={`/posts/${postData.id}`}>hier</a> bekijken.
-                </>
+                </div>
             );
     }
 }

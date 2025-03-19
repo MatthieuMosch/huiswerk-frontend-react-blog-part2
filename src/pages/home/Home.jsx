@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Home.css";
 
 import Tile from "../../components/tile/Tile.jsx";
+import Error from "../../components/error/Error.jsx";
 
 function Home() {
     const uri = "http://localhost:3000";
@@ -28,11 +29,10 @@ function Home() {
         void fetchAllPosts();
     }, [])
 
-
     return (
-        <main>
+        <>
             {isLoading && <p>loading...</p>}
-            {errorMsg ? <p>{errorMsg}</p> :
+            {errorMsg ? <Error>{errorMsg}</Error> :
                 posts.length > 0 ?
                     <>
                         <h2>{posts.length} posts beschikbaar</h2>
@@ -50,7 +50,7 @@ function Home() {
                         </article>
                     </> : null
             }
-        </main>
+        </>
     );
 }
 

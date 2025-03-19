@@ -35,7 +35,6 @@ function Post() {
         try{
             setIsLoading(true);
             const response = await axios.delete(`${uri}/posts/${id}`);
-            console.log("delete: ", response);
         } catch(err) {
             setErrorMsg(err.message);
             console.error("foutmelding", err);
