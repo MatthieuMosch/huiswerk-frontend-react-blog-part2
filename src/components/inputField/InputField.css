@@ -1,0 +1,7 @@
+.inputField {
+    display: flex;
+}
+
+.inputField__input {
+    flex: 1;
+}

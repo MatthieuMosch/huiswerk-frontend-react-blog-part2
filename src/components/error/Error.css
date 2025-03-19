@@ -1,0 +1,8 @@
+.error-msg {
+    border: 2px dashed darkred;
+    border-radius: 50px;
+    background: pink;
+    color: red;
+    height: 100px;
+    line-height: 100px;
+}

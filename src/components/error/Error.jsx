@@ -1,8 +1,10 @@
+import "./Error.css";
+
 function Error({children}) {
     return (
-        <div className="error-msg">
+        <h2 className="error-msg">
             {children}
-        </div>
+        </h2>
     );
 }
 
