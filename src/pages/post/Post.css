@@ -1,0 +1,20 @@
+.post {
+    display: flex;
+    flex-direction: column;
+}
+
+cite {
+    align-self: end;
+}
+
+.readtime {
+    align-self: start;
+}
+
+.comments {
+    align-self: start;
+}
+
+.shares {
+    align-self: start;
+}

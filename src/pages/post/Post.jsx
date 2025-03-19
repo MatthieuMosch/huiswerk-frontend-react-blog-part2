@@ -1,6 +1,8 @@
 import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import axios from "axios";
+import "./Post.css";
+import showDate from "../../showDate.jsx";
 
 function Post() {
     const {id} = useParams();
@@ -29,10 +31,11 @@ function Post() {
     }, [])
 
     //delete a post
-    async function deletePost(id){
+    async function deletePost(){
         try{
             setIsLoading(true);
-            const response = await axios.delete(`${URI}/posts/${id}`);
+            const response = await axios.delete(`${uri}/posts/${id}`);
+            console.log("delete: ", response);
         } catch(err) {
             setErrorMsg(err.message);
             console.error("foutmelding", err);
@@ -42,11 +45,15 @@ function Post() {
     }
 
     return (
-        <article>
-            <h2>{post.title}</h2>
-            {post && <p>{post.content}</p>}
-            {/*/!*<button type="button" onClick={()=>fetchPost(6)}>haal post 6 op</button>*!/*/}
-            {/*/!*<button type="button" onClick={()=>deletePost(19)}>verwijder post 19</button>*!/*/}
+        <article className="post">
+            <span className="readtime">readtime: {post.readTime}</span>
+            <h1>{post.title}</h1>
+            <h2>{post.subtitle}</h2>
+            <p>{post.content}</p>
+            <cite>{showDate(post.created)} {post.author}</cite>
+            <span className="comments">comments: {post.comments}</span>
+            <span className="shares">shares: {post.shares}</span>
+            <button type="button" onClick={deletePost}>verwijder post</button>
         </article>
     );
 }

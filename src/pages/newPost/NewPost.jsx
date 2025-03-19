@@ -26,7 +26,7 @@ function NewPost() {
         }
     }
 
-    //change the subtitle of a post
+    //change the subtitle of the first post
     async function changeFirstSubtitle(subtitle){
         try{
             setIsLoading(true);

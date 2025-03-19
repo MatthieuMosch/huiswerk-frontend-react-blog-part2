@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
+import "./Home.css";
 
 import Tile from "../../components/tile/Tile.jsx";
 
@@ -30,13 +31,12 @@ function Home() {
 
     return (
         <main>
-            <h1>blog part 2</h1>
-            <article>
-                {isLoading && <p>loading...</p>}
-                {errorMsg ? <p>{errorMsg}</p> :
-                    posts.length > 0 ?
-                        <>
-                            <h2>{posts.length} posts beschikbaar</h2>
+            {isLoading && <p>loading...</p>}
+            {errorMsg ? <p>{errorMsg}</p> :
+                posts.length > 0 ?
+                    <>
+                        <h2>{posts.length} posts beschikbaar</h2>
+                        <article className="post-tiles">
                             {
                                 posts.map(post => (
                                     <Tile
@@ -47,9 +47,9 @@ function Home() {
                                     />
                                 ))
                             }
-                        </> : null
-                }
-            </article>
+                        </article>
+                    </> : null
+            }
         </main>
     );
 }
